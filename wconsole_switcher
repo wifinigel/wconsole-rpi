@@ -46,10 +46,11 @@ wconsole_on () {
   ln -s /etc/wconsole/default/isc-dhcp-server /etc/default/isc-dhcp-server 
   ln -s /etc/wconsole/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf
   ln -s /etc/wconsole/network/interfaces /etc/network/interfaces
-  ufw allow 2400/tcp
-  ufw allow 4800/tcp
-  ufw allow 9600/tcp
-  ufw allow 19200/tcp
+  # these may be useful to uncomment if you have ufw installed
+  #ufw allow 2400/tcp
+  #ufw allow 4800/tcp
+  #ufw allow 9600/tcp
+  #ufw allow 19200/tcp
   touch $STATUS_FILE
   echo "RPi will now reboot"
   sleep 1
@@ -75,10 +76,11 @@ wconsole_off () {
   cp /etc/default/isc-dhcp-server.wcon /etc/default/isc-dhcp-server
   cp /etc/dhcp/dhcpd.conf.wcon /etc/dhcp/dhcpd.conf
   cp /etc/network/interfaces.wcon /etc/network/interfaces
-  ufw delete allow 2400/tcp
-  ufw delete allow 4800/tcp
-  ufw delete allow 9600/tcp
-  ufw delete allow 19200/tcp
+  # these may be useful to uncomment if you have ufw installed
+  #ufw delete allow 2400/tcp
+  #ufw delete allow 4800/tcp
+  #ufw delete allow 9600/tcp
+  #ufw delete allow 19200/tcp
   echo "RPi will now reboot"
   if [ -e "$STATUS_FILE" ]; then
     rm $STATUS_FILE
