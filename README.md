@@ -1,7 +1,7 @@
 # wconsole-rpi
 Turn your rpi in to a wireless serial console cable
 
-It can be annoying to have to sit in an equipment room to use the serial console port on an item of networking equipment. This project allows you to use an RPi to connect to your serial console cable via a wireless link whoie sat in the comfort of a nearby office, rather than sat with your laptop on the equipment room floor :) 
+It can be annoying to have to sit in an equipment room to use the serial console port on an item of networking equipment. This project allows you to use an RPi to connect to your serial console cable via a wireless link while sat in the comfort of a nearby office, rather than sat with your laptop on the equipment room floor :) 
 
 To provide a wireless console serial port, you will need:
 
@@ -12,13 +12,15 @@ Before attempting to use wconsole, you must install the followings packages on y
 
 1. Connect your RPI via the Ethernet port to a network with Internet access
 2. SSH to the RPi and login
-3. execute the following commands:
+3. Execute the following commands:
     apt-get update
     apt-get install hostapd
     apt-get install isc-dhcp-server
     apt-get install ser2net
+    
+(Note that if you prefer to use the RPi desktop rather than SSH, it's fine to add the packages that way too)
 
-Once packages are installed, copy the supplied wconsole gzipped archive to the /etc directory of the RPI (e.g.using SFTP). Extract the files from the archive using the command:
+Once the packages are installed, copy the supplied wconsole gzipped archive to the /etc directory of the RPI (e.g.using SFTP). Extract the files from the archive using the command:
 
  tar xvfz rconsole.tar.gz
 
