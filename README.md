@@ -48,6 +48,10 @@ At this point, the RPi will reboot. Following the reboot, an SSID of RCONSOLE wi
 
 Once you have joined the SSID, open a telnet session to 192.168.42.1:9600. This will provide access to the serial console cable plugged in to the USB port.
 
-To switch out of rconsole mode, SSH to the RPi using network address 192.168.42.1 (while connected to the rconsole SSID) and run the command: sudo /etc/wconsole/wconsole_switcher off
+To switch out of rconsole mode, SSH to the RPi using network address 192.168.42.1 (while connected to the rconsole SSID) and run the command: 
+
+```
+ sudo /etc/wconsole/wconsole_switcher off
+```
 
 ![WLANPi Menu](https://github.com/wifinigel/wconsole-rpi/blob/master/images/wconsole_rpi_demo.jpg)
