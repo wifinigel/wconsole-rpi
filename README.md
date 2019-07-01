@@ -22,19 +22,27 @@ Before attempting to use wconsole, you must install the followings packages on y
 
 Once the packages are installed, copy the supplied wconsole gzipped archive to the /etc directory of the RPI (e.g.using SFTP). Extract the files from the archive using the command:
 
+```
  tar xvfz rconsole.tar.gz
+```
 
 Change to the newly created directory /etc/wconsole:
 
+```
  cd /etc/wconsole
+```
 
 Run the installation script to configure hostapd, ser2net isc-dhcp-server files:
 
+```
  sudo ./wconsole_switcher install
+```
 
 Flip the RPi in to wconsole mode:
 
+```
  sudo ./wconsole_switcher on
+```
 
 At this point, the RPi will reboot. Following the reboot, an SSID of RCONSOLE will be available on channel 1. Join the SSID and use the default key: Password1.
 
